@@ -39,6 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+        # In-Built
+
+    'account',
+    'post',
+    'userprofile',
+
+    # Third-Party
+    'graphene_django',
+    'corsheaders',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -141,6 +153,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Configure Django App for Heroku.
 
-
+AUTH_USER_MODEL='account.user'
 
 django_heroku.settings(locals(),)
