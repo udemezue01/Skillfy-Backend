@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'account',
     'post',
     'userprofile',
+    'job',
 
     # Third-Party
     'graphene_django',
