@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    # In-Built
+
+    'account',
+    'post',
+    'userprofile',
+    'job',
+
+    # Third-Party
+    'graphene_django',
+    'corsheaders',
+    'cloudinary_storage',
+    'cloudinary',
+
+
 ]
 
 MIDDLEWARE = [
@@ -81,6 +99,8 @@ DATABASES = {
 }
 
 
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -118,3 +138,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Third Party Settings
+
+
+GRAPHENE = {
+    "SCHEMA": "django_root.schema.schema"
+}
+
