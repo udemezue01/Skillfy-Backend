@@ -5,7 +5,7 @@ from .base import *
 SECRET_KEY = '@^_gf^z$l)5uz7eb*@gehkw@un*yfe_nkn3=u%k807s7e(!ye9'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
