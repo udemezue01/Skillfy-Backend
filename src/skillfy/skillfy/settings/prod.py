@@ -2,6 +2,12 @@ from .base import *
 
 import dj_database_url
 
+import os
+
+
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+
 ALLOWED_HOSTS = ['127.0.0.1:8000', ]
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:

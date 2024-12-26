@@ -1,8 +1,6 @@
 from .base import *
 
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@^_gf^z$l)5uz7eb*@gehkw@un*yfe_nkn3=u%k807s7e(!ye9'
 
 
 ALLOWED_HOSTS = ['*']
