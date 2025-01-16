@@ -144,6 +144,8 @@ STATIC_URL = '/static/'
 
 # Third Party Settings
 
+AUTH_USER_MODEL = 'account.User'
+
 
 GRAPHENE = {
     "SCHEMA": "skillfy.graph.schema.schema"
