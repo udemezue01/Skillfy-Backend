@@ -12,7 +12,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+import os
+from django.core.exceptions import ImproperlyConfigured
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -23,7 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = '@^_gf^z$l)5uz7eb*@gehkw@un*yfe_nkn3=u%k807s7e(!ye9'
+# SECRET_KEY = 'cDk_czmfrnm_eWIIHfCzngzP1-rcZTXHsZl6fT0TQfeosq6iLgJ3kyGiV4UWT0QfDYo'
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+if not SECRET_KEY:
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
 
 
 
