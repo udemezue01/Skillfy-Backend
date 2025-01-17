@@ -13,7 +13,7 @@ import os
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgresql://skillfy_user:zXPyot3M6CbOhXCEI4GRIrlo14dkjpyU@dpg-cu51qjbtq21c73dvi410-a/skillfy',
         conn_max_age=600
     )
 }
